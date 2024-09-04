@@ -92,42 +92,88 @@ h3 {
 .introBox {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  justify-content: space-around;
+  margin: 20px 0;
 }
 .textInBox {
-  border-left: 3px solid #1bacf0;
-  border-radius: 20%;
-  width: 300px;
-  height: 200px;
-  background: rgb(255, 255, 255);
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
   padding: 20px;
-  margin-bottom: 30px;
-  position: relative;
-  margin-left: 5px;
-  margin-right: 5px;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.textInBox:hover {
+  transform: translateY(-20px);
 }
 .fontbold {
   font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.useSth {
+  margin: 10px 0;
+}
+
+.useName {
+  font-weight: bold;
 }
 .graphBar {
-  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
 }
+
 .graph1 {
-  border-radius: 0 10px 10px 0;
-  margin-left: 0;
-  height: 100%;
-  /* border: 1px solid #2D1C41; */
-  border-left: 0px;
-  background: #0f0f0fba;
+  height: 10px;
+  background-color: #3498db;
+  width: 90%;
 }
 
-.graphHTML .graphCSS {
-  width: 100px;
-}
-.graphJS .graphJQ {
-  width: 70px;
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .textInBox {
+    width: 45%;
+  }
 }
 
+@media screen and (max-width: 480px) {
+  .textInBox {
+    width: 100%;
+  }
+}
+
+/* PORTFOLIO 섹션 스타일 */
+#PORTFOLIO .portfolio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-box {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 45%;
+  height: 200px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-box {
+    width: 100%;
+  }
+}
+
+/* 슬라이드 효과 */
+.slick-prev:before,
+.slick-next:before {
+  color: #3498db;
+}
 /* Top 버튼*/
 #top_btn {
   display: none;
