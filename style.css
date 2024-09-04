@@ -1,242 +1,101 @@
-body {
-  margin: 0;
-  height: 800px;
-}
-/* nav */
-nav:first-child {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
-}
-nav a {
-  text-decoration: none;
-  color: black;
-  margin: 1em;
-  font-size: 2em;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>😜YUJIN's portfolio</title>
 
-nav:hover {
-  background: whitesmoke;
-}
-.menuBtn {
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  transition: background-size 0.3s;
-}
-#menu-underline {
-  position: absolute;
-  left: 0;
-  height: 4px;
-  width: 0;
-  border-radius: 3px;
-  transition: 0.5s;
-  background-color: pink;
-  top: 0;
-}
+    <!-- 제이쿼리 슬릭슬라이더 스크립트 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
 
-/* body main 시작 */
-section {
-  height: 800px;
-  background-image: url("files/keyboard03.jpg");
-  background-attachment: fixed;
-}
-.photo {
-  position: absolute;
-  top: 300px;
-  right: 100px;
-  border-radius: 30px;
-  border-style: groove;
-}
-h1 {
-  font-size: 6em;
-  width: 258px;
-  color: white;
-  font-family: sans-serif;
-  position: absolute;
-  top: 300px;
-  left: 100px;
-  animation: slide 1s ease-out; /*slide animation 적용 */
-}
-h3 {
-  font-size: 5em;
-  width: 200px;
-  color: black;
-  shape-outside: margin-box;
-  text-align: center;
-  top: 50px;
-}
+  <body>
+    <!-- 헤더 메뉴 -->
 
-/*text slide animation*/
-/*text 나타남*/
-@keyframes slide {
-  from {
-    left: -100px;
-    opacity: 0;
-  }
-  to {
-    left: 100px;
-    opacity: 1;
-  }
-}
-/*text 사라짐*/
-@keyframes disappear {
-  from {
-    left: 100px;
-    opacity: 1;
-  }
-  to {
-    left: -100px;
-    opacity: 0;
-  }
-}
-.introBox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-.textInBox {
-  background-color: white;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  width: 30%;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-.textInBox:hover {
-  transform: translateY(-20px);
-}
-.fontbold {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+    <section id="HOME">
+      <nav>
+        <div id="menu-underline"></div>
+        <a href="#HOME" class="menuBtn">HOME</a>
+        <a href="#PROFILE" class="menuBtn">PROFILE</a>
+        <a href="#PORTFOLIO" class="menuBtn">PORTFOLIO</a>
+        <a href="#CONTACT" class="menuBtn">CONTACT</a>
+      </nav>
+      <h1>YuJin's Pick!!</h1>
+      <img class="photo" src="files/workspace.jpg" width="600" height="500" />
+    </section>
+    <section id="PROFILE">
+      <h3>PROFILE</h3>
 
-.useSth {
-  margin: 10px 0;
-}
+      <div class="introBox">
+        <div class="textInBox">
+          <div class="num1"><b>Who I am?</b></div>
+          <p class="fontbold">서유진</p>
+          <p>대구대학교 컴퓨터IT공학부</p>
+          <p>정보공학전공</p>
+          <p>synthi6785@gmail.com</p>
+        </div>
 
-.useName {
-  font-weight: bold;
-}
-.graphBar {
-  background-color: #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-top: 5px;
-}
+        <div class="textInBox">
+          <div class="num2"></div>
+          <p class="fontbold">사용 언어</p>
+          <div class="useSth">
+            <div class="useName">HTML</div>
+            <div class="graphBar">
+              <div class="graph1 graphHTML" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="useSth">
+            <div class="useName">CSS</div>
+            <div class="graphBar">
+              <div class="graph1 graphCSS" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="useSth">
+            <div class="useName">JavaScript</div>
+            <div class="graphBar">
+              <div class="graph1 graphJS" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
 
-.graph1 {
-  height: 10px;
-  background-color: #3498db;
-  width: 90%;
-}
+        <div class="textInBox">
+          <div class="num3"><b>Other Skills</b></div>
+          <p class="fontbold">JQuery, React, Figma</p>
+        </div>
+      </div>
+    </section>
 
-/* 반응형 스타일 */
-@media screen and (max-width: 768px) {
-  .textInBox {
-    width: 45%;
-  }
-}
+    <section id="PORTFOLIO">
+      <h3>PORTFOLIO</h3>
+      <div class="portfolio-container">
+        <div class="portfolio-box"></div>
 
-@media screen and (max-width: 480px) {
-  .textInBox {
-    width: 100%;
-  }
-}
+        <div class="portfolio-box"></div>
+      </div>
+    </section>
 
-/* PORTFOLIO 섹션 스타일 */
-#PORTFOLIO .portfolio-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    <section id="CONTACT">
+      <h3>CONTACT</h3>
+      <div class="contact-container">
+        <div class="contact-box"></div>
+        <h2>서유진</h2><t><h4>Seo Yu Jin</h4></t>
+        <p>e-mail : synthi85@gmail.com</p>
+      </div>
+      </div>
+    </section>
+ 
 
-.portfolio-box {
-  background-color: white;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  width: 45%;
-  height: 200px;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    <!--페이지 Top 버튼-->
 
-@media screen and (max-width: 768px) {
-  .portfolio-box {
-    width: 100%;
-  }
-}
+    <nav id="top_btn">
+      <a id="top_a" href="#">TOP😜</a>
+    </nav>
 
-/* 슬라이드 효과 */
-.slick-prev:before,
-.slick-next:before {
-  color: #3498db;
-}
-/* Top 버튼*/
-#top_btn {
-  display: none;
-  position: fixed;
-  right: 0px;
-  bottom: 100px; /*위치 절대값으로 고정*/
-  background: #8f95eb;
-  opacity: 0.5; /* 불투명도 조절*/
-  color: #fff;
-  width: 100px;
-  /* transform: rotate(-90deg); 반시계 방향 90도 회전 */
-  border-radius: 10px; /*모서리가 둥근 사각형, 박스 테두리 지정*/
-  text-align: center;
-}
-#top_btn a {
-  color: #fff;
-}
-#top_btn:hover {
-  background: rgba(100, 100, 100, 0.6);
-  transition-duration: 0.5s;
-}
-/* Mobile */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav a {
-    font-size: 1.5em;
-    margin: 0.5em;
-  }
-
-  h1 {
-    font-size: 2em;
-    top: 200px;
-    left: 50px;
-  }
-
-  h3 {
-    font-size: 3em;
-  }
-
-  #top_btn {
-    display: block;
-  }
-  .photo {
-    position: absolute;
-    top: 300px;
-    display: flex;
-
-    width: 400px;
-    height: 300px;
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 768px) {
-  nav {
-    flex-direction: row;
-  }
-
-  nav a {
-    font-size: 2em;
-    margin: 1em;
-  }
-}
+    <script src="script.js"></script>
+  </body>
+</html>
